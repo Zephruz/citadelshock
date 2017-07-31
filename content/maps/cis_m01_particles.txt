@@ -1,0 +1,4 @@
+particles_manifest
+{
+	"file"		"particles/cis_m01.pcf"
+}
