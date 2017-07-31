@@ -76,7 +76,8 @@ CitadelShock.Player:RegisterMeta("SpectatedGame", {
 	Name: Lobby
 	Meta:
 		- Set - Sets a players lobby/game lobby (SERVER)
-		- Get - Gets a players lobby/game lobby (SHARED)
+		- Get - Gets a players lobby/game table (SHARED)
+		- GetID - Gets a players lobby/game id (SHARED)
 		- Join - Joins a lobby (CLIENT)
 		- Leave - Leaves a lobby (CLIENT)
 		- IsIn - Gets if a player's in a lobby (SHARED)

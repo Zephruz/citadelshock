@@ -14,13 +14,13 @@ local loadoutTypes = {
 		f = {
 			["Loadout"] = function(self)
 				self.Player:StripWeapons()
-				self.Player:SetHealth(100)
+				self.Player:SetHealth((CitadelShock.Player.StartHealth or 100))
 				
 				if (self.Player:IsInLobby()) then
 					self.Player:SetReady(false)
 				end
 			end,
-			["Spawn"] = function(self) 
+			["Spawn"] = function(self)
 				self.Player:Spawn()
 				
 				self.Player:SetPos((CitadelShock.Player.teams[self.Player:GetStatus()].spos or Vector(0,0,0)))
@@ -43,10 +43,13 @@ local loadoutTypes = {
 				self.Player:Give("cis_buildtool")
 				self.Player:Give("weapon_physcannon")
 				
-				self.Player:SetHealth(100)
+				self.Player:SetHealth((CitadelShock.Player.StartHealth or 100))
 			end,
 			["Spawn"] = function(self)
 				if (!self.Player:IsInLobby() or !self.Player:IsInGame()) then self.Player:SetStatus(0) return false end
+				
+				local side = CitadelShock.Game.Sides[self.Player:GetSide()]
+				local sideCol = (side.color && Vector(side.color.r/255, side.color.g/255, side.color.b/255) || Vector( 1, 1, 1 ))
 				
 				self.Player:Spawn()
 				
@@ -55,7 +58,7 @@ local loadoutTypes = {
 				
 				self.Player:SetTeam( 1 )
 				self.Player:SetModel(models[ math.random( #models ) ]:Replace("%s", math.random(1, 6)))
-				self.Player:SetPlayerColor( Vector( 1, 1, 1 ) )
+				self.Player:SetPlayerColor( sideCol )
 				
 				self.Player:SetCollisionGroup(COLLISION_GROUP_PASSABLE_DOOR)
 			end,
@@ -74,7 +77,7 @@ local loadoutTypes = {
 
 				self.Player:Spectate( OBS_MODE_ROAMING )
 				self.Player:SetPos((CitadelShock.Player.teams[self.Player:GetStatus()].spos or Vector(0,0,0)))
-				timer.Simple((CitadelShock.Game.RespawnTime or 5),
+				timer.Simple((CitadelShock.Player.RespawnTime or 5),
 				function()
 					self.Player:SetStatus(1)
 				end)

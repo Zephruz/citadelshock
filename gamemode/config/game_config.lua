@@ -5,18 +5,14 @@
 --[[
 	CONFIG VARIABLES
 ]]
-CitadelShock.Game.MaxResourceAmount = 100 -- The maximum amount of resource that can be given by a resource node/entity
-
--- [[Players]]
-CitadelShock.Game.RespawnTime = 1 -- How long it takes for a player to respawn (in seconds)
-
 -- [[Generator]]
-CitadelShock.Game.GeneratorHealth = 2500 -- How much health the generator starts with
-CitadelShock.Game.BombPurchaseDelay = 1 -- Delay between bomb purchases (in seconds)
-CitadelShock.Game.MoneyGenerationInts = 60 -- How frequent the generator spawns money (in seconds)
+CitadelShock.Game.GeneratorHealth = 2500 		-- How much health the generator starts with
+CitadelShock.Game.BombPurchaseDelay = 1 		-- Delay between bomb purchases (in seconds)
+CitadelShock.Game.MoneyGenerationInts = 60 		-- How frequent the generator spawns money (in seconds)
 
 -- [[Misc]]
-CitadelShock.Game.ResourceRespawnTime = 10 -- How long it takes for a resource to respawn
+CitadelShock.Game.ResourceRespawnTime = 10 		-- How long it takes for a resource to respawn
+CitadelShock.Game.MaxResourceAmount = 100 		-- The maximum amount of resources that can be given by a resource node/entity
 
 -- [[Game phases/rounds]]
 CitadelShock.Game.Phases = {
@@ -93,15 +89,16 @@ CitadelShock.Game.Sides = {
 	
 	-- [[TEAM/SIDE 1]]
 	[1] = {
-		spos = Vector(61.88, -1684.17, 130.61), -- Side/team spawn position (for all players on THIS side)
+		spos = Vector(61.88, -1684.17, 130.61), 	-- Side/team spawn position (for all players on THIS side)
 		gen = {
 			pos = Vector(-63.16, -1951.68, 129.60), -- Generator spawn position
-			ang = Angle(0, 0, 0), -- Generator spawn angles (generally is not needed to be changed)
+			ang = Angle(0, 0, 0), 					-- Generator spawn angles (generally is not needed to be changed)
 		},
 		resArea = { -- The area in which resources CAN spawn (this is passed to the resource creation function)
-			Vector(1030, -2590, 65), -- Area point one
-			Vector(-1121, -2202, 65), -- Area point two
+			Vector(1030, -2590, 65),	-- Area point one
+			Vector(-1121, -2202, 65), 	-- Area point two
 		},
+		color = Color(205,85,85),		-- Team/Side Color
 	},
 	
 	-- [[TEAM/SIDE 2]]
@@ -115,6 +112,7 @@ CitadelShock.Game.Sides = {
 			Vector(-1085, 2560, 65), 
 			Vector(1070, 2196, 65),
 		},
+		color = Color(85,205,85),
 	},
 }
 
