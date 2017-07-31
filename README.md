@@ -31,4 +31,4 @@ ZeroChain - 3D Artist/(Entity) Developer</br>
 Sir Thomas - Graphics Artist/Bug Tester</br> 
 
 ### Developer Documentation
-Aye, soon.
+- Soon
