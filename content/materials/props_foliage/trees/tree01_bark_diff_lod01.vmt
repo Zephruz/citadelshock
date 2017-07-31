@@ -1,0 +1,12 @@
+"VertexLitGeneric"
+{
+	"$baseTexture"			"props_foliage/trees/tree01_bark_diff"
+	
+	"$bumpMap"				"props_foliage/trees/tree01_bark_nrm"
+	"$normalmapalphaenvmapmask" "1"
+	
+	"$surfaceprop" "Wood"
+	"$model" 1
+
+
+}

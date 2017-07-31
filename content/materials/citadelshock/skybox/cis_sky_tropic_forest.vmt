@@ -1,0 +1,8 @@
+"LightMappedGeneric"
+{
+	"$basetexture"	"citadelshock\skybox\cis_sky_tropic_forest"
+	"$surfaceprop"	"default"
+	"$translucent"	0
+	//"$decal"	1
+	"%keywords" "shock"
+}

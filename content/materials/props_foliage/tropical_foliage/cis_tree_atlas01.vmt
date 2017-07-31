@@ -1,0 +1,9 @@
+"VertexLitGeneric"
+{
+	"$basetexture"	"props_foliage/tropical_foliage/cis_tree_atlas01"
+	$alphatest 1
+    $allowalphatocoverage 1
+    $alphatestreference .25
+	"%keywords" "shock"
+	"$nocull" 1
+}

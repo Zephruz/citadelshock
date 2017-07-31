@@ -1,0 +1,7 @@
+UnlitGeneric
+{
+$baseTexture "citadelshock/skybox/dust_horizon_even"
+$translucent 1
+$color "[ .5 .5 .5 ]"
+
+}

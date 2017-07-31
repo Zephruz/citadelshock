@@ -1,0 +1,25 @@
+"VertexLitGeneric"
+{	
+	"$baseTexture"			"props_mystic/hammer_diff"
+
+	$selfillum 1
+	//"$selfillummaskscale" "1"
+	$selfillummask "props_mystic/hammer_em"
+
+	"$bumpMap"				"props_mystic/hammer_nrm"
+	"$normalmapalphaenvmapmask" "1"
+	
+	"$surfaceprop" "metal"
+	"$model" 1
+	
+	$phong 1
+
+        //$phongexponent 15
+        $phongboost .25
+        $phongtint "[1 1 1]"
+        $phongfresnelranges "[1 2 3]"
+		$phongexponenttexture	"props_mystic/hammer_phong"	
+	
+
+
+}

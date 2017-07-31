@@ -1,0 +1,20 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "citadelshock/level/aztec_wall04_diff"
+	"$surfaceprop" "concrete"
+	
+    "$detail" "detail\noise_detail_01"
+	"$detailscale" "7.345"
+	"$detailblendfactor" .6
+	"$detailblendmode" 0
+	
+	"%keywords" "aztec"
+	
+	"$bumpmap" "citadelshock/level/aztec_wall04_nrm"
+	"$normalmapalphaenvmapmask" 1
+	
+	"$envmaptint" "[ .5 .5 .5 ]"
+	"$envmap" "env_cubemap"
+	"$envmapcontrast" 1
+	"$envmapsaturation" 1
+}

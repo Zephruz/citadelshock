@@ -1,0 +1,26 @@
+"VertexLitGeneric"
+{
+	"$baseTexture"			"props_structure/metal_modularparts_diff"
+
+	"$bumpMap"				"props_structure/metal_modularparts_nrm"
+	"$normalmapalphaenvmapmask" "1"
+	
+	"$surfaceprop" "Stone"
+	"$model" 1
+
+	"$envmap" "env_cubemap"
+	"$envmaptint" "[1 1 1]"
+	
+	$phong 1
+
+        //$phongexponent 15
+        $phongboost 1
+        $phongtint "[1 1 1]"
+        $phongfresnelranges "[1 7 3]"
+		$phongexponenttexture	"props_structure/metal_modularparts_phong"	
+	
+		$rimlight               1
+		$rimlightexponent       0.25
+		$rimlightboost          1	
+
+}

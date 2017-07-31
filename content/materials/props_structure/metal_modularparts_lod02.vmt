@@ -1,0 +1,8 @@
+"VertexLitGeneric"
+{
+	"$baseTexture"			"props_structure/metal_modularparts_lod02"
+
+	"$surfaceprop" "Stone"
+	"$model" 1
+
+}

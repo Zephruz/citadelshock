@@ -1,0 +1,10 @@
+"VertexLitGeneric"
+{
+	"$baseTexture"			"props_mystic/small_bomb_diff"
+
+	"$bumpMap"				"props_mystic/base_bomb_nrm"
+	"$normalmapalphaenvmapmask" "1"
+	
+	"$surfaceprop" "metal"
+	"$model" 1
+}

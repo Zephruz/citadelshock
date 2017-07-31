@@ -1,0 +1,8 @@
+"VertexLitGeneric"
+{
+	"$baseTexture"			"props_structure/wooden_fence01_diff_lod02"
+
+	"$surfaceprop" "wood"
+	"$model" 1
+
+}

@@ -1,0 +1,25 @@
+"VertexLitGeneric"
+{
+	"$baseTexture"			"props_structure/wooden_fence01_diff"
+	
+	"$bumpMap"				"props_structure/wooden_fence01_nrm"
+	"$normalmapalphaenvmapmask" "1"
+	
+	"$surfaceprop" "wood"
+	"$model" 1
+
+	"$envmap" "env_cubemap"
+	"$envmaptint" "[0.01 0.01 0.01]"
+	"$envmapfresnel" "2"
+	$phong 1
+
+        //$phongexponent 200
+        $phongboost 1
+        $phongtint "[1 1 1]"
+        $phongfresnelranges "[1 1 1]"
+		$phongexponenttexture	"props_structure/wooden_fence01_phong"	
+	
+		$rimlight               1
+		$rimlightexponent       2
+		$rimlightboost          0.1	
+}

@@ -1,0 +1,7 @@
+"VertexLitGeneric"
+{
+	"$baseTexture"			"props_mystic/proximity_bomb_diff_lod02"
+
+	"$surfaceprop" "metal"
+	"$model" 1
+}

@@ -1,0 +1,7 @@
+"VertexLitGeneric"
+{
+	"$baseTexture"			"props_mystic/shockwavegun_platin_diff_lod01"
+
+	"$surfaceprop" "metal"
+	"$model" 1
+}

@@ -1,0 +1,13 @@
+"VertexLitGeneric"
+{
+	"$baseTexture"			"props_mystic/magicgenerator_p03_diff_lod02"
+
+	$selfillum 1
+	"$selfillummaskscale" "25"
+	$selfillummask "props_mystic/magicgenerator_p03_em"
+
+
+	"$surfaceprop" "metal"
+	"$model" 1
+
+}

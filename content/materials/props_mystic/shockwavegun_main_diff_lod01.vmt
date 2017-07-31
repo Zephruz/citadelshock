@@ -1,0 +1,12 @@
+"VertexLitGeneric"
+{
+	$color2 "[ 0.7 0.3 0.3 ]"
+	$blendTintByBaseAlpha 1
+	$blendTintColorOverBase 0.15
+	
+	"$baseTexture"			"props_mystic/shockwavegun_main_diff_lod01"
+
+	"$surfaceprop" "metal"
+	"$model" 1
+
+}

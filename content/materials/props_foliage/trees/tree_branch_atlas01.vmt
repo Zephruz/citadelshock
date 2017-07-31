@@ -1,0 +1,7 @@
+"VertexLitGeneric"
+{
+	"$baseTexture"			"props_foliage/trees/tree_branch_atlas01"
+	"$alphatest" 1
+    "$model" "1"
+	"$nocull" 				"1"
+}

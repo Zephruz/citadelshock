@@ -1,0 +1,13 @@
+"VertexLitGeneric"
+{	
+	"$baseTexture"			"props_mystic/hammer_diff_lod02"
+
+	$selfillum 1
+	//"$selfillummaskscale" "1"
+	$selfillummask "props_mystic/hammer_em"
+
+	"$surfaceprop" "metal"
+	"$model" 1
+
+
+}

@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+	"$basetexture"	"props_foliage/tropical_foliage/cis_plants01_lod01"
+	"$alphatest" 1
+}

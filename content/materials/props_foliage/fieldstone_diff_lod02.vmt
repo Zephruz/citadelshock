@@ -1,0 +1,9 @@
+"VertexLitGeneric"
+{
+	"$baseTexture"			"props_foliage/fieldstone_diff_lod02"
+	
+	"$surfaceprop" "stone"
+	"$model" 1
+
+
+}

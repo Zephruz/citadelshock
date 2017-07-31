@@ -1,0 +1,8 @@
+"LightMappedGeneric"
+{
+	"$basetexture"	"citadelshock\skybox\dust_west_2"
+	"$surfaceprop"	"default"
+	"$translucent"	1
+	"$decal"	1
+	"%keywords" "shock"
+}

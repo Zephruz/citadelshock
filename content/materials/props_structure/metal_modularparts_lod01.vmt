@@ -1,0 +1,11 @@
+"VertexLitGeneric"
+{
+	"$baseTexture"			"props_structure/metal_modularparts_diff"
+
+	"$bumpMap"				"props_structure/metal_modularparts_nrm"
+	"$normalmapalphaenvmapmask" "1"
+	
+	"$surfaceprop" "Stone"
+	"$model" 1
+
+}

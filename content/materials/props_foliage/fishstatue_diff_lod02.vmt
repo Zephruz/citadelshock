@@ -1,0 +1,9 @@
+"VertexLitGeneric"
+{
+	"$baseTexture"			"props_foliage/fishstatue_diff_lod02"
+
+	"$surfaceprop" "Wood"
+	"$model" 1
+
+
+}

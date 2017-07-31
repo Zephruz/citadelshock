@@ -1,0 +1,10 @@
+"VertexLitGeneric"
+{
+	"$baseTexture"			"props_structure/wooden_fence01_diff"
+	
+	"$bumpMap"				"props_structure/wooden_fence01_nrm"
+	"$normalmapalphaenvmapmask" "1"
+	
+	"$surfaceprop" "wood"
+	"$model" 1
+}

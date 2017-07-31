@@ -1,0 +1,8 @@
+"VertexLitGeneric"
+{
+	"$baseTexture"			"props_foliage/trees/tree01_bark_diff_lod02"
+
+	"$surfaceprop" "Wood"
+	"$model" 1
+
+}
