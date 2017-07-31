@@ -6,7 +6,6 @@ CitadelShock is a gamemode that was submitted in the 2017 GmodStore gamemode com
 Inspired by the game Shockwave Battle (Clonk).</br>
 
 You will be tasked to protect your teams generator. This may seem like a simple task, but when being bombarded with bombs of all kinds; you may meet your demise.</br>
-
 </br>
 You are competing to win against another team. You must protect your sides generator or you will lose.</br> 
 Your generator is very important, as it allows you to buy bombs - it also generates money periodically.</br>
