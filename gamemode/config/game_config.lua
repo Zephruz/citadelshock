@@ -7,7 +7,7 @@
 ]]
 -- [[Generator]]
 CitadelShock.Game.GeneratorHealth = 2500 		-- How much health the generator starts with
-CitadelShock.Game.BombPurchaseDelay = 1 		-- Delay between bomb purchases (in seconds)
+CitadelShock.Game.BombPurchaseDelay = 5 		-- Delay between bomb purchases (in seconds)
 CitadelShock.Game.MoneyGenerationInts = 60 		-- How frequent the generator spawns money (in seconds)
 
 -- [[Misc]]
@@ -46,7 +46,7 @@ CitadelShock.Game.Phases = {
 		},
 		-- [[optional stuff below]]
 		custFunc = function(lobby)									-- Custom function to run when this phase starts
-			
+
 		end,
 	},
 }

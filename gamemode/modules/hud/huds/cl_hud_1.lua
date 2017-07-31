@@ -177,8 +177,8 @@ draw = function() -- Lobby HUD element - Creates elements that display players i
 	-- [[Current Lobby Info]]
 	if (LocalPlayer():IsInLobby()) then
 		local lobby = CitadelShock.Lobby.lobbies[LocalPlayer():GetIDLobby()]
-		local baseL_X, baseL_Y = 10, 10
 		local baseL_W, baseL_H = 350, 350
+		local baseL_X, baseL_Y = ScrW() - (baseL_W+10), 0
 		surface.SetDrawColor( 40, 40, 40, 255 )
 		surface.SetMaterial( HUD.Variables.materials.cbg	)
 		surface.DrawTexturedRectUV( baseL_X, baseL_Y, baseL_W, baseL_H, 1, 0, 0, 1)
@@ -309,7 +309,7 @@ draw = function()
 	base_y = base_y + bt_margin
 
 	local baseL_W, baseL_H = 250, 50 + (#CitadelShock.Game.Resources * 25)
-	local baseL_X, baseL_Y = 10, 5
+	local baseL_X, baseL_Y = ScrW()-(baseL_W), 85
 		
 	if (#CitadelShock.Game.Resources > 0) then
 		draw.RoundedBox(4, baseL_X, baseL_Y, baseL_W, baseL_H, Color(45,45,45,235))
@@ -319,19 +319,20 @@ draw = function()
 		
 		if (sideInfo) then
 			-- [[RESOURCES]]
+			local r_XPos = (baseL_X)
 			local r_YPos = (baseL_Y + 20)
-			draw.SimpleText( "TEAM RESOURCES", "CS_HUD_SM", 25, r_YPos, Color(255,255,255,255), TEXT_ALIGN_LEFT, TEXT_ALIGN_TOP )
+			draw.SimpleText( "TEAM RESOURCES", "CS_HUD_SM", r_XPos + 25, r_YPos, Color(255,255,255,255), TEXT_ALIGN_LEFT, TEXT_ALIGN_TOP )
 			
 			for id,r in pairs(CitadelShock.Game.Resources) do
 				if (resources[r.name]) then
 					local resData = resources[r.name]
 					r_YPos = r_YPos + 23
-					draw.SimpleText( r.name .. ": " .. resData, "CS_HUD_SM", 40, r_YPos, Color(255,255,255,255), TEXT_ALIGN_LEFT, TEXT_ALIGN_TOP )
+					draw.SimpleText( r.name .. ": " .. resData, "CS_HUD_SM", r_XPos + 40, r_YPos, Color(255,255,255,255), TEXT_ALIGN_LEFT, TEXT_ALIGN_TOP )
 					
 					if (r.icon) then
 						surface.SetDrawColor( 255, 255, 255, 255 )
 						surface.SetMaterial(Material(r.icon))
-						surface.DrawTexturedRect( 21, r_YPos + 2, 16, 16 )
+						surface.DrawTexturedRect( r_XPos + 21, r_YPos + 2, 16, 16 )
 					end
 				end
 			end
@@ -355,7 +356,7 @@ draw = function()
 			draw.RoundedBox(4, baseL_X, baseL_Y + baseL_H + 15, genW, genH, Color(45,45,45,235))
 			draw.RoundedBox(4, baseL_X, baseL_Y + baseL_H + 15, genW*(gen:Health()/CitadelShock.Game.GeneratorHealth), genH, Color(255,75,75,255))
 			
-			draw.SimpleText( genBarTXT, "CS_HUD_XXSM", 20, baseL_Y + baseL_H + 17, Color(255,255,255,255), TEXT_ALIGN_LEFT, TEXT_ALIGN_TOP )
+			draw.SimpleText( genBarTXT, "CS_HUD_XXSM", baseL_X + (genW/2), baseL_Y + baseL_H + 17, Color(255,255,255,255), TEXT_ALIGN_CENTER, TEXT_ALIGN_TOP )
 		end
 	end
 end}

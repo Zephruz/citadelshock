@@ -2,7 +2,11 @@ include( "shared.lua" )
 
 -- [[Functions]]
 function CitadelShock:ChatMessage(msg)
-	chat.AddText(Color(255,35,35), "[Citadel Shock] ", Color(255,255,255), msg)
+	if (CitadelShock.Player.ChatNotifications) then
+		chat.AddText(Color(255,35,35), "[Citadel Shock] ", Color(255,255,255), msg)
+	end
+	
+	hook.Run("CIS.Hook.ChatMessage", msg)
 end
 
 local function InitModules()

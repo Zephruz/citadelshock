@@ -41,7 +41,7 @@ end)
 net.Receive("CIS.Net.LobbyDeleted", function(len)
 	local id = net.ReadInt(32)
 
-	CitadelShock:ChatMessage("Lobby #" .. id .. " has been deleted/closed!")
+	-- CitadelShock:ChatMessage("Lobby #" .. id .. " has been deleted/closed!")
 	
 	if (CitadelShock.Lobby.lobbies[id]) then CitadelShock.Lobby.lobbies[id] = nil end
 

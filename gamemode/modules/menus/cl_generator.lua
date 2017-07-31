@@ -33,10 +33,10 @@ function MENU:GeneratorPanel(genEnt)
 	
 	-- [[GENERATOR INFO]]
 	local genInfo = vgui.Create( "DPanel", self.generatorPanel )
-	genInfo:Dock(RIGHT)
+	genInfo:Dock(TOP)
 	genInfo:DockMargin(5,5,5,5)
 	genInfo:DockPadding(0,20,0,0)
-	genInfo:SetWide(150)
+	genInfo:SetTall(80)
 	genInfo.Paint = function(pnl,w,h)
 		if !(IsValid(genEnt)) then self.frame:Remove() return end
 		draw.RoundedBoxEx( 4, 0, 0, w, h, Color(75,75,75,55), true, true, true, true)
@@ -44,8 +44,21 @@ function MENU:GeneratorPanel(genEnt)
 		draw.RoundedBoxEx( 4, 0, 0, w, 20, Color(75,75,75,155), true, true, false, false)
 		draw.SimpleText( "Generator Info", "CS_DERMA_MD", w/2, 11, Color(255,255,255,255), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER )
 		
-		draw.SimpleText( "Health: " .. genEnt:Health(), "CS_DERMA_LG", w/2, 25, Color(255,255,255,255), TEXT_ALIGN_CENTER, TEXT_ALIGN_TOP )
-		draw.SimpleText( "$" .. math.floor(genEnt:Health() * 0.1) .. "/" .. CitadelShock.Game.MoneyGenerationInts .. " seconds (" .. (genEnt.moneyGenerate - os.time() or 0) .. ")", "CS_DERMA_LG", w/2, 45, Color(255,255,255,255), TEXT_ALIGN_CENTER, TEXT_ALIGN_TOP )
+		-- [[Health]]
+		draw.RoundedBoxEx( 4, 10, 27, w - 20, 20, Color(35,35,35,185), true, true, true, true)
+		draw.RoundedBoxEx( 4, 12, 29, (w - 24)*((genEnt:Health() or 0)/CitadelShock.Game.GeneratorHealth), 16, Color(255,75,75,185), true, true, true, true)
+		
+		draw.SimpleText( "Health: " .. (genEnt:Health() or 0), "CS_DERMA_LG", w/2, 30, Color(255,255,255,255), TEXT_ALIGN_CENTER, TEXT_ALIGN_TOP )
+		
+		-- [[Money]]
+		local nextMGen = (genEnt.moneyGenerate - os.time() or 0)
+		local defMGen = CitadelShock.Game.MoneyGenerationInts
+		
+		draw.RoundedBoxEx( 4, 10, 52, w - 20, 20, Color(35,35,35,185), true, true, true, true)
+		draw.RoundedBoxEx( 4, 12, 54, (w - 24)*(nextMGen/defMGen), 16, Color(25,255,125,185), true, true, true, true)
+		
+		draw.SimpleText( "$" .. math.floor(genEnt:Health() * 0.1) .. "/" .. defMGen .. " seconds (" .. nextMGen .. ")", "CS_DERMA_LG", 
+		w/2, 55, Color(255,255,255,255), TEXT_ALIGN_CENTER, TEXT_ALIGN_TOP )
 	end
 	
 	-- [[BOMBS]]

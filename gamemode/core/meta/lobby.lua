@@ -271,7 +271,7 @@ function CitadelShock.Lobby.meta:SetGameStatus(bool)
 	
 	hook.Run("CIS.Hook.LobbyGameStatus", self, bool)
 
-	for k,v in pairs(player.GetAll()) do v:SendMessage("A game has " .. (bool && "started" || "ended") .. " for lobby #" .. id .. "!") end
+	-- for k,v in pairs(player.GetAll()) do v:SendMessage("A game has " .. (bool && "started" || "ended") .. " for lobby #" .. id .. "!") end
 	return bool
 end
 
