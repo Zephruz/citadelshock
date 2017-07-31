@@ -45,9 +45,15 @@ CSDerma.frame = {}
 CSDerma.frame.bgMat = Material("materials/citadelshock/gui/derma_grunge_panel.png", "noclamp smooth")
 
 function CSDerma.frame:Init()
+	-- [[Menu Sizing Vars]]
+	-- The menus material has a space around it; therefor we need to account for the space where the contents can be placed inside of it.
+	local dp_L, dp_T, dp_R, dp_B = 50, 80, 50, 45
+	
+	-- [[Menu]]
 	self.title = {text = "DFrame", color = Color(255,255,255,255)}
 	self:ShowCloseButton(false)
 	self:SetTitle("")
+	self:DockPadding((dp_L/self:GetWide()) * self:GetWide(),(dp_T/self:GetTall()) * self:GetTall(),(dp_R/self:GetWide()) * self:GetWide(),(dp_B/self:GetTall()) * self:GetTall())
 end
 
 function CSDerma.frame:ShowCSCloseButton(bool)

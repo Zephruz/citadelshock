@@ -34,7 +34,7 @@ function MENU:GameResultPanel(res)
 	
 	local infoContainer = vgui.Create("CSScrollPanel", self.gResPanel)
 	infoContainer:Dock(FILL)
-	infoContainer:DockMargin(self.frame:GetWide()*(50/450),self.frame:GetTall()*(45/500),self.frame:GetWide()*(50/450),self.frame:GetTall()*(40/500))
+	infoContainer:DockMargin(5,5,5,5)
 	infoContainer:GetCanvas():DockPadding(0,35,0,0)
 	infoContainer.Paint = function(s,w,h) 
 		local resText = (res.draw && "Draw/Tie Game" || res.sides[plySide].win && "Your side won!" || !res.sides[plySide].win && "Your side lost!" || "Invalid")

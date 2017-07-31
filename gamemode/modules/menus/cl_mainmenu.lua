@@ -14,7 +14,7 @@ MENU.nav.buttons = {
 	["Welcome"] = function(self)
 		local pnl = vgui.Create("DScrollPanel", self.frame)
 		pnl:Dock(FILL)
-		pnl:DockMargin(5,self.frame:GetTall()*(45/450),self.frame:GetWide()*(50/600),self.frame:GetTall()*(45/450))
+		pnl:DockMargin(5,5,5,5)
 		pnl:GetCanvas():DockPadding(0,25,0,0)
 		pnl.Paint = function(s,w,h) 
 			draw.SimpleText( "Welcome to " .. GetHostName(), "CS_DERMA_TITLE", 5, 5, Color(255,255,255,255), TEXT_ALIGN_LEFT, TEXT_ALIGN_TOP )
@@ -39,7 +39,7 @@ MENU.nav.buttons = {
 		if !(CitadelShock.CMDS) then return false end
 		local pnl = vgui.Create("DScrollPanel", self.frame)
 		pnl:Dock(FILL)
-		pnl:DockMargin(5,self.frame:GetTall()*(45/450),self.frame:GetWide()*(50/600),self.frame:GetTall()*(45/450))
+		pnl:DockMargin(5,5,5,5)
 		pnl:GetCanvas():DockPadding(0,25,0,0)
 		pnl.Paint = function(s,w,h) 
 			draw.SimpleText( "Chat and Console Commands", "CS_DERMA_TITLE", 5, 5, Color(255,255,255,255), TEXT_ALIGN_LEFT, TEXT_ALIGN_TOP )
@@ -90,7 +90,7 @@ MENU.nav.buttons = {
 	["How To Play"] = function(self)
 		local pnl = vgui.Create("CSScrollPanel", self.frame)
 		pnl:Dock(FILL)
-		pnl:DockMargin(5,self.frame:GetTall()*(45/450),self.frame:GetWide()*(50/600),self.frame:GetTall()*(45/450))
+		pnl:DockMargin(5,5,5,5)
 		pnl:GetCanvas():DockPadding(0,25,0,0)
 		pnl.Paint = function(s,w,h) 
 			draw.SimpleText( "How To Play", "CS_DERMA_TITLE", 5, 5, Color(255,255,255,255), TEXT_ALIGN_LEFT, TEXT_ALIGN_TOP )
@@ -181,7 +181,7 @@ MENU.nav.buttons = {
 				phaseDesc:Dock(FILL)
 				phaseDesc:SetWrap(true)
 				phaseDesc:SetText([[
-					This stage is ]] .. (string.FormattedTime(v.timeLimit, "%02im %02is")) .. [[ long.
+					This phase is ]] .. (string.FormattedTime(v.timeLimit, "%02im %02is")) .. [[ long.
 					
 					Building is ]] .. (v.canBuild && "allowed" || "not allowed") .. [[ during this phase.
 					
@@ -378,7 +378,7 @@ MENU.nav.buttons = {
 	
 		local pnl = vgui.Create("DPanel", self.frame)
 		pnl:Dock(FILL)
-		pnl:DockMargin(5,self.frame:GetTall()*(45/450),self.frame:GetWide()*(50/600),self.frame:GetTall()*(45/450))
+		pnl:DockMargin(5,5,5,5)
 		pnl:DockPadding(0,25,0,0)
 		pnl.Paint = function(s,w,h) 
 			draw.SimpleText( "About CitadelShock", "CS_DERMA_TITLE", 5, 5, Color(255,255,255,255), TEXT_ALIGN_LEFT, TEXT_ALIGN_TOP )
@@ -419,7 +419,7 @@ function MENU:NavBar()
 
 	self.navBarPanel = vgui.Create("CSScrollPanel", self.frame)
 	self.navBarPanel:Dock(LEFT)
-	self.navBarPanel:DockMargin(self.frame:GetWide()*(50/600),self.frame:GetTall()*(45/450),5,self.frame:GetTall()*(45/450))
+	self.navBarPanel:DockMargin(5,5,5,5)
 	self.navBarPanel:SetWide(150)
 	self.navBarPanel.active = {pnl = nil, button = nil}
 	self.navBarPanel.Paint = function(self,w,h)
