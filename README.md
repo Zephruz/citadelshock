@@ -1,3 +1,5 @@
+<img src="https://media.discordapp.net/attachments/329322070515122197/341334967298555904/logo.png" style="width:100%;height:85px;">
+
 # About CitadelShock
 CitadelShock is a gamemode that was submitted in the 2017 GmodStore gamemode competition.
 
