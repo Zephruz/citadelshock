@@ -18,13 +18,17 @@ with the most remaining generator health wins.</br>
 </br>
 This is a strategic-teamwork game and you must work with your teammates to be successful.
 
+### Workshop Links
+CitadelShock Gamemode - http://steamcommunity.com/sharedfiles/filedetails/?id=1095829356
+CitadelShock Content - http://steamcommunity.com/sharedfiles/filedetails/?id=1095822203
+
+### Credits
 <b>Creators/Developers:</b></br>
 Zephruz - Developer</br>
 ZeroChain - 3D Artist/(Entity) Developer</br>
 
 <b>Contributors & Bug testers:</b></br>
-Sir Thomas - Graphics Artist/Bug Tester</br>
+Sir Thomas - Graphics Artist/Bug Tester</br> 
 
-### Workshop Links
-CitadelShock Gamemode - http://steamcommunity.com/sharedfiles/filedetails/?id=1095829356
-CitadelShock Content - http://steamcommunity.com/sharedfiles/filedetails/?id=1095822203
+### Developer Documentation
+Aye, soon.
