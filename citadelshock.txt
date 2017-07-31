@@ -1,0 +1,7 @@
+"citadelshock"
+{
+	"base"		"base"
+	"title"		"Citadel Shock"
+	"maps"		"^cis_"
+	"menusystem"	"1"
+}
