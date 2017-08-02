@@ -136,18 +136,18 @@ function SWEP:DrawHUD()
 
 	-- [[Structure info]]
 	local strucInfo = fetchStructureInfo(self, "types")[self.selected.type]
-	draw.WordBox( 4, 10, ScrH()/2, "Selected structure: " .. strucInfo.name, "CS_WEP_LG", Color(55, 55, 55, 185 ), Color(255, 255, 255, 255 ) )
+	draw.WordBox( 4, 10, ScrH()/2, "Selected structure: " .. strucInfo.name, "CS_WEP_MD", Color(55, 55, 55, 185 ), Color(255, 255, 255, 255 ) )
 	
 	local costY = ScrH()/2 + 35
 	
 	if (strucInfo.reqLevel) then
 		costY = costY + 35
-		draw.WordBox( 4, 10, ScrH()/2 + 35, "Required Level: " .. strucInfo.reqLevel, "CS_WEP_LG", 
+		draw.WordBox( 4, 10, ScrH()/2 + 35, "Required Level: " .. strucInfo.reqLevel, "CS_WEP_MD", 
 		(strucInfo.reqLevel <= self.Owner:GetLevel() && Color(25, 255, 25, 105 ) || Color(255, 25, 25, 105 )), Color(255, 255, 255, 255 ) )
 	end
 	
 	if (strucInfo.cost) then
-		draw.WordBox( 4, 10, costY, "Cost(s): ", "CS_WEP_LG", Color(55, 55, 55, 185 ), Color(255, 255, 255, 255 ) )
+		draw.WordBox( 4, 10, costY, "Cost(s): ", "CS_WEP_MD", Color(55, 55, 55, 185 ), Color(255, 255, 255, 255 ) )
 		for k,v in pairs(strucInfo.cost) do
 			costY = costY + 30
 			draw.WordBox( 4, 20, costY + 5, k .. ": " .. v, "CS_WEP_MD", Color(55, 55, 55, 185 ), Color(255, 255, 255, 255 ) )
@@ -236,12 +236,14 @@ function SWEP:PrimaryAttack()
 		struct:SetHealth(stTypes.health)
 		struct.costs = stTypes.cost
 		
-		if (stInf.validPosCheck && !stInf.validPosCheck(struct, tr)) then
-			struct:Remove()
-		end
-		
 		if (stInf.custPosCheck && !tr.Entity:IsWorld()) then
 			struct:SetPos(stInf.custPosCheck(struct, ent))
+		end
+		
+		if (stInf.validPosCheck && !stInf.validPosCheck(struct, tr)) then
+			struct:Remove()
+			self.Owner:SendMessage("You can't place that there!")
+			return false
 		end
 		
 		if (self.Owner:IsInGame()) then

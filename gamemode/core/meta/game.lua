@@ -303,8 +303,8 @@ function()
 			-- [[TREE INFO]]
 			t.ResourceType = "wood"
 			t.Models = {
-				harvested = {model = "models/zerochain/props_foliage/tree01_stump.mdl", collide = COLLISION_GROUP_NONE},
-				notharvested = {model = "models/zerochain/props_foliage/tree01.mdl", collide = COLLISION_GROUP_NONE},
+				harvested = {model = "models/zerochain/props_foliage/tree01_stump.mdl", collide = COLLISION_GROUP_WORLD},
+				notharvested = {model = "models/zerochain/props_foliage/tree01.mdl", collide = COLLISION_GROUP_WORLD},
 			}
 			
 			t:Spawn()
@@ -335,8 +335,8 @@ function()
 			-- [[STONE INFO]]
 			r.ResourceType = "stone"
 			r.Models = {
-				harvested = {model = "models/zerochain/props_foliage/rock02_ore01_reduced.mdl", collide = COLLISION_GROUP_NONE},
-				notharvested = {model = "models/zerochain/props_foliage/rock02_ore01.mdl", collide = COLLISION_GROUP_NONE},
+				harvested = {model = "models/zerochain/props_foliage/rock02_ore01_reduced.mdl", collide = COLLISION_GROUP_WORLD},
+				notharvested = {model = "models/zerochain/props_foliage/rock02_ore01.mdl", collide = COLLISION_GROUP_WORLD},
 			}
 
 			r:Spawn()
@@ -368,8 +368,8 @@ function()
 			-- [[METAL INFO]]
 			m.ResourceType = "metal"
 			m.Models = {
-				harvested = {model = "models/zerochain/props_foliage/rock01_ore01_reduced.mdl", collide = COLLISION_GROUP_NONE},
-				notharvested = {model = "models/zerochain/props_foliage/rock01_ore01.mdl", collide = COLLISION_GROUP_NONE},
+				harvested = {model = "models/zerochain/props_foliage/rock01_ore01_reduced.mdl", collide = COLLISION_GROUP_WORLD},
+				notharvested = {model = "models/zerochain/props_foliage/rock01_ore01.mdl", collide = COLLISION_GROUP_WORLD},
 			}
 
 			m:Spawn()

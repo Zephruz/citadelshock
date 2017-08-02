@@ -305,6 +305,7 @@ CitadelShock.Player:RegisterMeta("EXP", {
 			return self:GetNW2Int("CIS.PNW.exp")
 		end,
 		Set = function(self, val)
+			if (val < 0) then return false end
 			self:SetNW2Int("CIS.PNW.exp", val)
 			self:SetSQLValue("exp", val)
 			
@@ -312,6 +313,7 @@ CitadelShock.Player:RegisterMeta("EXP", {
 		end,
 		Add = function(self, val)
 			local nExp = self:GetEXP() + val
+			if (nExp < 0) then nExp = 0 end
 			self:SetNW2Int("CIS.PNW.exp", (nExp))
 			self:SetSQLValue("exp", (nExp))
 			

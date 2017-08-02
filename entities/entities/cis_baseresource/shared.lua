@@ -6,10 +6,10 @@ ENT.RenderGroup = RENDERGROUP_TRANSLUCENT
 
 -- [[VARS]]
 ENT.Harvestable = true -- Whether this entity is harvestable or not
-ENT.Models = {
+ENT.Models = (ENT.Models or {
 	harvested = {model = "models/zerochain/props_foliage/tree01_stump.mdl", collide = COLLISION_GROUP_WORLD},
-	notharvested = {model = "models/zerochain/props_foliage/tree01.mdl", collide = COLLISION_GROUP_NONE},
-}
+	notharvested = {model = "models/zerochain/props_foliage/tree01.mdl", collide = COLLISION_GROUP_WORLD},
+})
 ENT.HarvestTime = 5 -- How long it takes to harvest (seconds)
 ENT.RespawnTime = (CitadelShock.Game.ResourceRespawnTime or 10) -- How long it takes to respawn (seconds)
 ENT.ResModelRadius = 40 -- The radius of the resources model

@@ -54,6 +54,7 @@ function ENT:Think()
 	local harvSoundType = (harvSounds[self:GetHarvestSounds()] or harvSounds["wood"])
 
 	if (self:GetHarvesting() && !self:GetAbortHarvest()) then
+		if (LocalPlayer() != self:GetHarvester()) then return false end
 		surface.PlaySound( harvSoundType[math.random(1,#harvSoundType)] )
 		self:CreateParticleEffect( self:GetHarvestParticles(), 0 )
 	end
