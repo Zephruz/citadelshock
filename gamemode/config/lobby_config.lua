@@ -5,8 +5,8 @@
 --[[
 	CONFIG VARIABLES
 ]]
-CitadelShock.Lobby.MaxLobbies = 2 			-- The maximum amount of lobbies (recommended to stay below 4 for performance)
-CitadelShock.Lobby.MaxSize = 10 			-- The maximum size lobby 
+CitadelShock.Lobby.MaxLobbies = 1 			-- The maximum amount of lobbies (recommended to stay below 4 for performance)
+CitadelShock.Lobby.MaxSize = 16 			-- The maximum size lobby 
 CitadelShock.Lobby.MinSize = 2 				-- The minimum size lobby (this is also how many players are required to start the game!)
 
 -- [[Lobby sizes]]
@@ -16,4 +16,7 @@ CitadelShock.Lobby.Sizes = {
 	["2 vs 2"] = 4,
 	["4 vs 4"] = 8,
 	["5 vs 5"] = 10,
+	["6 vs 6"] = 12,
+	["7 vs 7"] = 14,
+	["8 vs 8"] = 16,
 }

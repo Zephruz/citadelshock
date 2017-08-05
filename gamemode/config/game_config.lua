@@ -23,7 +23,7 @@ CitadelShock.Game.Phases = {
 	-- [[Build status/phase]]
 	[1] = { -- The phase order
 		name = "Build", 		-- Phase name (REQUIRED)
-		timeLimit = (60*6),		-- Phase time limit/length (REQUIRED)
+		timeLimit = (60*10),		-- Phase time limit/length (REQUIRED)
 		canBuild = true,		-- Can players build during this phase? (REQUIRED)
 		canFight = false,		-- Can players fight during this phase? (REQUIRED)
 		divider = true,			-- Is there a side divider during this phase? (REQUIRED)
@@ -31,23 +31,23 @@ CitadelShock.Game.Phases = {
 			color = Color(55,255,125,255),								-- The color of this phase (REQUIRED)
 			icon = "materials/citadelshock/hud/cis_icon_hammer.png",	-- The icon of this phase (REQUIRED)				
 		},
+		-- [[optional stuff below]]
+		custFunc = function(lobby)									-- Custom function to run when this phase starts
+
+		end,
 	},
 	
 	-- [[Fight status/phase]]
 	[2] = {
 		name = "Fight",
-		timeLimit = (60*8),
+		timeLimit = (60*10),
 		canBuild = false,
 		canFight = true,
 		divider = false,
 		ui = {
-			color = Color(255,125,55,255),							-- The color of this phase
-			icon = "materials/citadelshock/hud/cis_icon_bomb.png",	-- The icon of this phase		
+			color = Color(255,125,55,255),
+			icon = "materials/citadelshock/hud/cis_icon_bomb.png",
 		},
-		-- [[optional stuff below]]
-		custFunc = function(lobby)									-- Custom function to run when this phase starts
-
-		end,
 	},
 }
 
@@ -155,7 +155,7 @@ CitadelShock.Game.Disabled = {
 -- These are ONLY for default resources.
 CitadelShock.Game.StartResources = {
 	-- Resources
-	["money"] = 1000,
+	["money"] = 500,
 	["wood"] = 0,
 	["stone"] = 0,
 	["metal"] = 0,
@@ -190,7 +190,7 @@ CitadelShock.Game.BombInfo = {
 	["cis_bomb_medium"] = {
 		reqLevel = 3,
 		BombName = "Medium Bomb",
-		BombCost = {["money"] = 350, ["wood"] = 15, ["stone"] = 15},
+		BombCost = {["money"] = 350, ["wood"] = 10, ["stone"] = 10},
 		BlastRadius = 600,
 		BlastDamageMultiplier = 15,
 		BombMass = 15,	
@@ -200,7 +200,7 @@ CitadelShock.Game.BombInfo = {
 	["cis_bomb_big"] = {
 		reqLevel = 7,
 		BombName = "Big Bomb",
-		BombCost = {["money"] = 475, ["wood"] = 25, ["stone"] = 25},
+		BombCost = {["money"] = 475, ["wood"] = 15, ["stone"] = 15},
 		BlastRadius = 800,
 		BlastDamageMultiplier = 20,
 		BombMass = 18,	
@@ -209,9 +209,9 @@ CitadelShock.Game.BombInfo = {
 	["cis_bomb_logs"] = {
 		reqLevel = 1,
 		BombName = "Log Bomb",
-		BombCost = {["money"] = 25},
+		BombCost = {["money"] = 25, ["wood"] = 20, ["stone"] = 15},
 		BlastRadius = 350,
-		BlastDamageMultiplier = 10,
+		BlastDamageMultiplier = 15,
 		BombMass = 300,
 	}
 }
