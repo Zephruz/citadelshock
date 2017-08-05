@@ -7,6 +7,10 @@ Inspired by the game Shockwave Battle (Clonk).</br>
 
 You will be tasked to protect your teams generator. This may seem like a simple task, but when being bombarded with bombs of all kinds; you may meet your demise.</br>
 
+### Plans/Future updates
+- More bombs
+- CVars for config (going to be a LOT of them)
+
 ### Bugs/Support
 If you do happen to find any bugs, please make an issue report.</br>
 We will make an attempt to fix them as soon as possible.</br>
